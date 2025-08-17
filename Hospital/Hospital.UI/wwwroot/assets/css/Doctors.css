@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.doctors-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.doctors-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.doctors-section h2 span {
+    color: #007bff; /* Mavi renk */
+}
+
+.doctors-section p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.doctors-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.doctor-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.doctor-info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    transition: top 0.3s ease;
+    opacity: 0;
+}
+
+.doctor-card:hover .doctor-image img {
+    transform: translateX(100%); /* Sağ tarafa kayar */
+}
+
+.doctor-card:hover .doctor-info {
+    top: 0;
+    opacity: 1;
+}
+
+.doctor-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.doctor-info p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.bio {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #e0e0e0;
+}
+
+.MainNavbar{
+    background-color: #000; 
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  
+  }
+  .MainButton{
+    color: #f0f0f0;
+    gap: 10px;
+    
+    margin-right: 0px;
+    text-decoration:none ;
+    font-weight: 1000px;
+    
+   
+  }
+  
+  
+  
+  
+  
+  .MainHome {
+    background-color: black; 
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  
+  
+  
+  
+  .Mainabout{
+    background-color: black; 
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+      
+  }
+  
+  .MainServices{
+    background-color: black; 
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  
+   
+   
+   
+  }
+  .MainDoctors{
+    background-color: black; 
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  
+  .MainAppoint{
+  
+    background-color: black; 
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  
+  
+  .MainTest{
+    background-color: black; 
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  
+  }
+  
+  .MainBlog{
+    background-color: black; 
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  .container {
+    position: relative;
+    display: inline-block;
+    
+   
+  
+  }
+  .hover-button {
+    background-color: transparent;
+    color: rgb(236, 229, 229);
+    padding: 80px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .hover-button:hover {
+    background-color: blue;
+    color: white;
+  }
+  .main-button {
+    background-color: black; 
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .container:hover .dropdown-content {
+    display: block;
+  }
+  
+  .L1{
+    background-color: white; 
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  .L2{
+    background-color: white; 
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  .L3{
+    background-color: white; 
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  .L4{
+    background-color: white; 
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px rgb(84, 94, 186) inset;
+    }
+  }
+  
+  
+  .ul{
+    list-style: none;
+    background: #22438c;
+  }
+  .ul li{
+    display: inline-block;
+    position: relative;
+  }
+  .ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  ul li ul.dropdown{
+    width: 100px;
+    background: #22438c;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  
+  .fa-user-doctor{
+    transform: scale(0.5);
+  }
+

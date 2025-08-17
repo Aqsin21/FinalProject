@@ -1,49 +1,199 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Hospital.UI</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Hospital.UI.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleveland</title>
+    <link rel="stylesheet" href="~/assets/css/cleveland.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="./assets/js/cleveland.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hospital.UI</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+
+    <section class="FirstNavbar">
+        <div class="Logos">
+
+            <a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/?themeRefresh=1"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a>
+
+
+
+
+        </div>
+
+
+        <div class="First-Function">
+            <a asp-controller="Account" asp-action="Login" class="button">Login</a>
+            <a asp-controller="Account" asp-action="Register" class="button">Register</a>
+            <a href="appointment.html" class="button">Appointment</a>
+            <a href="#" class="button">Contact</a>
+        </div>
+    </section>
+
+
+
+    <section class="InfNavbar">
+
+        <div class="Cleveland">
+
+            <a href="http://127.0.0.1:5500/Cleveland.html"><img src="~/images/logo (2).png" class="logoimg" alt="logoimg"></a>
+
+        </div>
+
+        <div class="Number">
+            <a><i class="fa-solid fa-phone"></i></a>
+            <i class="Customer">Customer&support sales</i>
+            <p class="Digits">123-456-0975</p>
+        </div>
+        <div class="adress">
+            <a><i class="fa-solid fa-location-dot"></i></a>
+            <i class="Opening">Opening hours</i>
+            <p class="Mon-Sun">Mon - Sun : 09:00 - 18:00</p>
+        </div>
+        <div class="GetaQuote">
+
+            <a href="#" class="GetaQuoteButton"><span> GET A QUOTE<i><i class="fa-solid fa-caret-right"></i></i></span></a>
+
+        </div>
+    </section>
+
+    <section class="MainNavbar">
+
+        <a class="MainButton MainHome" href="#">HOME </a>
+
+
+        <a class="MainButton Mainabout" asp-controller="Home" asp-action="About">ABOUT</a>
+        <a class="MainButton MainServices" href="">SERVICES</a>
+        <a class="MainButton MainDoctors" href="Doctors.html">DOCTORS</a>
+        <a class="MainButton MainAppoint" href="appointment.html">APPOINTMENT</a>
+        <a class="MainButton MainTest" href="#">TESTIMONIAL</a>
+        <a class="MainButton MainBlog" asp-controller="Blog" asp-action="Index">BLOG</a>
+
+        <div class="container">
+            <a class="main-button">I WANT  TO <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+
+                <a href="#" class="L1"> <i class="fa-solid fa-user-doctor"></i>  Find a Doctor </a>
+                <a href="#" class="L2"><i class="fa-solid fa-calendar-days"></i> Request an Appointment</a>
+                <a href="#" class="L3"><i class="fa-solid fa-suitcase-medical"></i>Book a HealthCheck</a>
+                <a href="#" class="L4"><i class="fa-solid fa-tablet"></i>Access LAB Reports</a>
+
+            </div>
+
+
+    </section>
+    @RenderBody();
+
+
+
+    <section class="sponsors">
+        <nav>
+            <a href="#" class="sp1"> <img src="~/images/1.png" alt="sp1"> </a>
+            <a href="#" class="sp2"> <img src="~/images/2.png" alt="sp2"></a>
+            <a href="#" class="spo3"> <img src="~/images/3.png" alt="sp3"></a>
+            <a href="#" class="sp4"> <img src="~/images/4.png" alt="sp4"></a>
+        </nav>
+    </section>
+
+
+
+    <section class="footer1">
+
+
+        <div class="fton">
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-about">
+                            <h3>About Us</h3>
+                            <p>Cleveland Hospitals is one of the most multi-specialty healthcare provider catering to both native & foreigner patients. Manage your health the easier way with the Cleveland Hospital mobile app. Download it today! Available on:</p>
+                            <a href="#"><img src="images/appstore.png" alt=""></a>
+                            <a href="#"><img src="images/playstore.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-link">
+                            <h3>Our Associates</h3>
+                            <ul>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Research</a></li>
+                                <li><a href="#">Healthcare Services</a></li>
+                                <li><a href="#">Cleveland Foundation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link">
+                            <h3>What's New</h3>
+                            <p>Need To Know About Scoliosis? Scoliosis is a sideward bend of the spine which usually occurs in children, but can also sometimes affect adults. A normal spine is curved on the top of the shoulder.</p>
+                            <a href="#" class="btn btn-primary">Know More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-contact">
+                            <h3>Stay With Us</h3>
+                            <ul>
+                                <li><i class="fa fa-map-marker"></i> 10004, Battery Park, New York</li>
+                                <li><i class="fa fa-envelope"></i> info@yoursite.com</li>
+                                <li><i class="fa fa-phone"></i> +0 123-456-7890</li>
+                                <li><i class="fa fa-clock-o"></i> Open: Mon to Sat: 9AM to 5PM</li>
+                            </ul>
+                        </div>
+                        <div class="footer-subscribe">
+                            <h3>Get Updated</h3>
+                            <form action="#">
+                                <input type="email" placeholder="Your email here...">
+                                <button type="submit"><i class="fa fa-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p>Copyright © 2018 Cleveland. | All Rights Reserved</p>
+                            <ul class="footer-bottom-link">
+                                <li><a href="#">Make an Enquiry</a></li>
+                                <li><a href="#">Book an Appointment</a></li>
+                                <li><a href="#">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Hospital.UI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
