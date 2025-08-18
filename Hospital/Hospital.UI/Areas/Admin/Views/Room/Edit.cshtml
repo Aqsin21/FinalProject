@@ -1,0 +1,38 @@
+﻿@model Hospital.DAL.DataContext.Entities.Room
+
+<div class="container mt-4">
+    <h2>Edit Room</h2>
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group mb-3">
+            <label asp-for="RoomNumber"></label>
+            <input asp-for="RoomNumber" class="form-control" />
+            <span asp-validation-for="RoomNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Type"></label>
+            <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3 form-check">
+            <input asp-for="IsAvailable" class="form-check-input" />
+            <label asp-for="IsAvailable" class="form-check-label"></label>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Current Image</label><br />
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <img src="@Model.ImagePath" alt="Room Image" width="100" height="100" class="mb-2" />
+            }
+            <input type="file" name="ImageFile" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>

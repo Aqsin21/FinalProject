@@ -10,3 +10,7 @@ C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\obj\Debug\net8.0\Hosp
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\obj\Debug\net8.0\refint\Hospital.Business.dll
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\obj\Debug\net8.0\Hospital.Business.pdb
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\obj\Debug\net8.0\ref\Hospital.Business.dll
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\bin\Debug\net8.0\Hospital.DAL.dll
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\bin\Debug\net8.0\Hospital.DAL.pdb
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\obj\Debug\net8.0\Hospital.Business.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.Business\obj\Debug\net8.0\Hospital.CDC58633.Up2Date

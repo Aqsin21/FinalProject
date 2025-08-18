@@ -1,5 +1,9 @@
+using Hospital.Business.Services.Abstract;
+using Hospital.Business.Services.Concrete;
 using Hospital.DAL.DataContext;
 using Hospital.DAL.DataContext.Entities;
+using Hospital.DAL.Repositories.Abstract;
+using Hospital.DAL.Repositories.Concret;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,8 +36,11 @@ namespace Hospital.UI
                 options.SignIn.RequireConfirmedEmail = true;
 
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-            
 
+            builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+            builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+            builder.Services.AddScoped<IRoomService, RoomService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -50,6 +57,11 @@ namespace Hospital.UI
             app.UseRouting();
 
             app.UseAuthorization();
+            
+
+            app.MapControllerRoute(
+           name: "areas",
+           pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
             app.MapControllerRoute(
                 name: "default",

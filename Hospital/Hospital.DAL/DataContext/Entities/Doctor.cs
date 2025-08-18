@@ -6,6 +6,7 @@
         public int DepatmentId { get; set; }
         public required Department Department { get; set; }
         public required string Description { get; set; }
+        public required string ImagePath { get; set; }
 
     }
 }

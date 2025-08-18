@@ -267,3 +267,5 @@ C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\runtimes\w
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\Hospital.Business.dll
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\Hospital.Business.pdb
