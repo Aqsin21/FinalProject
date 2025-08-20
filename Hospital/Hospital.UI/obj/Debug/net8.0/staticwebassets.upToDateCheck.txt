@@ -177,6 +177,7 @@ wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\uploads\01857485-811a-4dd9-9417-8f09d87c9323.jpg
 wwwroot\uploads\336d8507-380c-42db-8c94-cc38b3101175.jpg
 wwwroot\uploads\3ffc4c52-469b-4178-b637-0658148d61a4.jpg
+wwwroot\uploads\575b6dd3-f44a-46f1-a862-9c5fa53883b4.jpg
 wwwroot\uploads\6af567d8-1049-4ed9-b0d3-4fcba923738a.jpg
 wwwroot\uploads\8369f7ee-e63f-4b4a-91e8-55dc68f19817.jpg
 wwwroot\uploads\926761fc-1967-4194-b044-4e126fcf3c1f.jpg

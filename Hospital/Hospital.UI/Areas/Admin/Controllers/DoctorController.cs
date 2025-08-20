@@ -76,15 +76,40 @@ namespace Hospital.UI.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
+            var departments = await _departmentService.GetAllAsync();
+
+            // Null kontrolü
+            if (departments == null)
+                departments = new List<Department>();
+
+            ViewBag.Departments = new SelectList(departments, "Id", "Name");
+
             var doctor = await _doctorService.GetByIdAsync(id);
             if (doctor == null) return NotFound();
+
             return View(doctor);
         }
+
         [HttpPost]
-        public async Task<IActionResult> Edit(Doctor doctor, IFormFile ImageFile)
+        public async Task<IActionResult> Edit(Doctor doctor, IFormFile? ImageFile)
         {
-            if (!ModelState.IsValid) return View(doctor);
+            if (!ModelState.IsValid)
+            {
+                // ViewBag tekrar set edilmezse select list boş gelir
+                var departments = await _departmentService.GetAllAsync();
+                ViewBag.Departments = new SelectList(departments, "Id", "Name");
+                return View(doctor);
+            }
+
             var existingDoctor = await _doctorService.GetByIdAsync(doctor.Id);
+            if (existingDoctor == null) return NotFound();
+
+            // Alanları güncelle
+            existingDoctor.FullName = doctor.FullName;
+            existingDoctor.DepartmentId = doctor.DepartmentId;
+            existingDoctor.Description = doctor.Description;
+
+            // Fotoğraf varsa kaydet
             if (ImageFile != null && ImageFile.Length > 0)
             {
                 var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
@@ -99,28 +124,20 @@ namespace Hospital.UI.Areas.Admin.Controllers
                 }
 
                 existingDoctor.ImagePath = "/uploads/" + fileName;
-
-                existingDoctor.FullName = doctor.FullName;
-                existingDoctor.DepartmentId = doctor.DepartmentId;
-                existingDoctor.Description = doctor.Description;
-
-
-
-               
             }
+
             await _doctorService.UpdateAsync(existingDoctor);
             return RedirectToAction(nameof(Index));
-
         }
 
+        [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var doctor = await _doctorService.GetByIdAsync(id);
-            if(doctor == null) return NotFound();
+            var doctor = await _doctorService.GetByIdAsync(id, includeProperties: "Department");
+            if (doctor == null) return NotFound();
+
             return View(doctor);
-
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
