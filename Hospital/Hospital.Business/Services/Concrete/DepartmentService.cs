@@ -1,4 +1,5 @@
 ﻿using Hospital.Business.Services.Abstract;
+using Hospital.DAL.DataContext;
 using Hospital.DAL.DataContext.Entities;
 using Hospital.DAL.Repositories.Abstract;
 using System;
@@ -11,7 +12,9 @@ namespace Hospital.Business.Services.Concrete
 {
     public class DepartmentService : GenericService<Department>, IDepartmentService
     {
-        public DepartmentService(IDepartmentRepository departmentRepository)
-            : base(departmentRepository) { }
+        public DepartmentService(IGenericRepository<Department> departmentRepository, AppDbContext dbContext)
+            : base(departmentRepository, dbContext)
+        {
+        }
     }
 }

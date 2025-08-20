@@ -1,16 +1,36 @@
 ﻿using Hospital.Business.Services.Abstract;
+using Hospital.DAL.DataContext;
 using Hospital.DAL.Repositories.Abstract;
+using Microsoft.EntityFrameworkCore;
 namespace Hospital.Business.Services.Concrete
 {
     public class GenericService<T> : IGenericService<T> where T : class
     {
         private readonly IGenericRepository<T> _repository;
+        private readonly AppDbContext _dbContext;
 
-        public GenericService(IGenericRepository<T> repository)
+        public GenericService(IGenericRepository<T> repository, AppDbContext dbContext)
         {
             _repository = repository;
+            _dbContext = dbContext;
         }
-        public async Task<IEnumerable<T>> GetAllAsync() => await _repository.GetAllAsync();
+
+        public async Task<IEnumerable<T>> GetAllAsync(string? includeProperties = null)
+        {
+            IQueryable<T> query = _dbContext.Set<T>();
+
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var includeProp in includeProperties.Split(',', StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp.Trim());
+                }
+            }
+
+            return await query.ToListAsync();
+        }
+
+        public Task<IEnumerable<T>> GetAllAsync() => GetAllAsync(null);
 
         public async Task<T?> GetByIdAsync(int id) => await _repository.GetByIdAsync(id);
 

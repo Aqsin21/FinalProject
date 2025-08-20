@@ -24,6 +24,7 @@ namespace Hospital.UI.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create() => View();
 
+    
         [HttpPost]
         public async Task<IActionResult> Create(Room room, IFormFile? ImageFile)
         {
@@ -44,11 +45,16 @@ namespace Hospital.UI.Areas.Admin.Controllers
 
                 room.ImagePath = "/uploads/" + fileName;
             }
+            else
+            {
+                // Eğer kullanıcı dosya seçmediyse, required property yüzünden ModelState invalid
+                ModelState.AddModelError("ImageFile", "Lütfen bir fotoğraf seçin.");
+                return View(room);
+            }
 
             await _roomService.CreateAsync(room);
             return RedirectToAction(nameof(Index));
         }
-
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
@@ -57,11 +63,15 @@ namespace Hospital.UI.Areas.Admin.Controllers
             return View(room);
         }
 
+     
         [HttpPost]
         public async Task<IActionResult> Edit(Room room, IFormFile? ImageFile)
         {
             if (!ModelState.IsValid) return View(room);
 
+            var existingRoom = await _roomService.GetByIdAsync(room.Id);
+
+            // Dosya upload
             if (ImageFile != null && ImageFile.Length > 0)
             {
                 var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
@@ -75,10 +85,16 @@ namespace Hospital.UI.Areas.Admin.Controllers
                     await ImageFile.CopyToAsync(stream);
                 }
 
-                room.ImagePath = "/uploads/" + fileName;
+                existingRoom.ImagePath = "/uploads/" + fileName;
             }
+            // else eski ImagePath zaten mevcut, değiştirmeye gerek yok
 
-            await _roomService.UpdateAsync(room);
+            // Diğer alanları güncelle
+            existingRoom.RoomNumber = room.RoomNumber;
+            existingRoom.Type = room.Type;
+            existingRoom.IsAvailable = room.IsAvailable;
+
+            await _roomService.UpdateAsync(existingRoom);
             return RedirectToAction(nameof(Index));
         }
 

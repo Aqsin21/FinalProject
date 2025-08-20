@@ -11,6 +11,6 @@ namespace Hospital.DAL.DataContext.Entities
         public required int RoomNumber { get; set; }
         public required string Type { get; set; } 
         public bool IsAvailable { get; set; }
-        public required string ImagePath { get; set; }
+        public  string? ImagePath { get; set; }
     }
 }
