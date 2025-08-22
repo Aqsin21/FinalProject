@@ -1,0 +1,62 @@
+﻿@using Hospital.DAL.DataContext.Entities
+@model List<News>
+
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4">News</h4>
+
+        <a asp-area="Admin" asp-controller="News" asp-action="Create" class="btn btn-success mb-3">
+            Create New News
+        </a>
+
+        <div class="card">
+            <h5 class="card-header">News CRUD</h5>
+            <div class="table-responsive text-nowrap">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Update</th>
+                            <th>Read</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Title</td>
+                                <td>@item.Description</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                                    {
+                                        <img src="@item.ImagePath" alt="News Image" width="50" height="50" />
+                                    }
+                                </td>
+                                <td>
+                                    <a asp-area="Admin" asp-controller="News" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                                        Update
+                                    </a>
+                                </td>
+                                <td>
+                                    <a asp-area="Admin" asp-controller="News" asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                                        Read
+                                    </a>
+                                </td>
+                                <td>
+                                    <form asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

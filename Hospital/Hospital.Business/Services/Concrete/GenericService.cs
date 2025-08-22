@@ -2,6 +2,7 @@
 using Hospital.DAL.DataContext;
 using Hospital.DAL.Repositories.Abstract;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 namespace Hospital.Business.Services.Concrete
 {
     public class GenericService<T> : IGenericService<T> where T : class
@@ -14,7 +15,10 @@ namespace Hospital.Business.Services.Concrete
             _repository = repository;
             _dbContext = dbContext;
         }
-
+        public async Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().AnyAsync(predicate);
+        }
         public async Task<IEnumerable<T>> GetAllAsync(string? includeProperties = null)
         {
             IQueryable<T> query = _dbContext.Set<T>();

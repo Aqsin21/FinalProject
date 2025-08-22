@@ -1,4 +1,5 @@
 ﻿using Hospital.Business.Services.Abstract;
+using Hospital.Business.Services.Concrete;
 using Hospital.DAL.DataContext.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,11 @@ namespace Hospital.UI.Areas.Admin.Controllers
         public async Task<IActionResult> Create(Department department)
         {
             if (!ModelState.IsValid) return View(department);
+            if (await _departmentService.ExistsAsync(n => n.Name == department.Name))
+            {
+                ModelState.AddModelError("Title", "Bu isimde department mevcut.");
+                return View(department);
+            }
 
             await _departmentService.CreateAsync(department);
             return RedirectToAction(nameof(Index));

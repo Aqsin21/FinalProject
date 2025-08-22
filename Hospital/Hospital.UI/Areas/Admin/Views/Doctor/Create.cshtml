@@ -1,14 +1,17 @@
 ﻿@model Hospital.DAL.DataContext.Entities.Doctor
 
 <form asp-action="Create" enctype="multipart/form-data">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <!-- 🔹 Tüm hata mesajlarını topluca göster -->
+    <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
+    <!-- FullName -->
     <div class="form-group mb-3">
         <label asp-for="FullName" class="control-label"></label>
         <input asp-for="FullName" class="form-control" />
         <span asp-validation-for="FullName" class="text-danger"></span>
     </div>
 
+    <!-- Department -->
     <div class="form-group mb-3">
         <label asp-for="DepartmentId" class="control-label">Department</label>
         <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.Departments">
@@ -17,16 +20,23 @@
         <span asp-validation-for="DepartmentId" class="text-danger"></span>
     </div>
 
+    <!-- Description -->
     <div class="form-group mb-3">
         <label asp-for="Description" class="control-label"></label>
         <textarea asp-for="Description" class="form-control"></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
+    <!-- Doctor Image -->
     <div class="form-group mb-3">
         <label>Doctor Image</label>
         <input type="file" name="ImageFile" class="form-control" />
+        <span asp-validation-for="ImagePath" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Create</button>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

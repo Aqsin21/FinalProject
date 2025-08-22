@@ -1,0 +1,29 @@
+﻿@model Hospital.DAL.DataContext.Entities.News
+
+<div class="container mt-4">
+    <h2>News Details</h2>
+
+    <div class="mb-3">
+        <label class="form-label">Title:</label>
+        <p class="form-control">@Model.Title</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Description:</label>
+        <p class="form-control">@Model.Description</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">News Image:</label><br />
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <img src="@Model.ImagePath" alt="News Image" width="150" />
+        }
+        else
+        {
+            <p>No image available.</p>
+        }
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

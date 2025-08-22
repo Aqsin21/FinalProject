@@ -43,6 +43,8 @@ namespace Hospital.UI
             builder.Services.AddScoped<IRoomService, RoomService>();
             builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
             builder.Services.AddScoped<IDoctorService, DoctorService>();
+            builder.Services.AddScoped<INewsRepository, NewsRepository>();
+            builder.Services.AddScoped<INewsService, NewsService>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 

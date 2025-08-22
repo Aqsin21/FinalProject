@@ -48,19 +48,6 @@ namespace Hospital.DAL.Migrations
                     b.ToTable("Appointments");
                 });
 
-            modelBuilder.Entity("Hospital.DAL.DataContext.Entities.Blog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Blogs");
-                });
-
             modelBuilder.Entity("Hospital.DAL.DataContext.Entities.Department", b =>
                 {
                     b.Property<int>("Id")
@@ -109,6 +96,31 @@ namespace Hospital.DAL.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Doctors");
+                });
+
+            modelBuilder.Entity("Hospital.DAL.DataContext.Entities.News", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Newss");
                 });
 
             modelBuilder.Entity("Hospital.DAL.DataContext.Entities.Patient", b =>

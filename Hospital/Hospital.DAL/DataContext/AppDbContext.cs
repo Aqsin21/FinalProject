@@ -12,7 +12,7 @@ namespace Hospital.DAL.DataContext
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Department> Departments { get; set; }
-        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<News> Newss { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
     }
 }

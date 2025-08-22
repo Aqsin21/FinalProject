@@ -30,6 +30,7 @@ namespace Hospital.UI.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid) return View(room);
 
+
             if (ImageFile != null && ImageFile.Length > 0)
             {
                 var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");

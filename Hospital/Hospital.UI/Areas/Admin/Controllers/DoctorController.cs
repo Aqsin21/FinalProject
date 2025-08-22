@@ -50,7 +50,11 @@ namespace Hospital.UI.Areas.Admin.Controllers
                 ViewBag.Departments = new SelectList(departments, "Id", "Name");
                 return View(doctor);
             }
-
+            if (await _doctorService.ExistsAsync(n => n.FullName == doctor.FullName))
+            {
+                ModelState.AddModelError("Title", "Bu başlıkta bir haber zaten mevcut.");
+                return View(doctor);
+            }
             // Fotoğraf yükleme
             if (ImageFile != null && ImageFile.Length > 0)
             {
