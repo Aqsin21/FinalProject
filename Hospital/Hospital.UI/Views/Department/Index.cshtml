@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Hospital.DAL.DataContext.Entities.Department>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Departments</title>
+    <link rel="stylesheet" href="~/assets/css/Departments.css" />
+    <style>
+        .department {
+            margin-bottom: 20px;
+        }
+        .department h3 {
+            cursor: pointer;
+            background: #0077b6;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .doctor-list {
+            display: none;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .doctor-card {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .doctor-card img {
+            width: 100px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section class="departments-section">
+        <h2>Departments & Doctors</h2>
+
+        @foreach (var department in Model)
+        {
+            <div class="department">
+                <h3 onclick="toggleDoctors('@department.Id')">@department.Name</h3>
+
+                <div id="doctors-@department.Id" class="doctor-list">
+                    @if (department.Doctors.Any())
+                    {
+                        @foreach (var doctor in department.Doctors)
+                        {
+                            <div class="doctor-card">
+                                <img src="@(string.IsNullOrEmpty(doctor.ImagePath)
+                                                                                 ? Url.Content("~/images/default-doctor.jpg")
+                                                                                 : Url.Content(doctor.ImagePath))"
+                         alt="@doctor.FullName" />
+                    <div>
+                        <h4>@doctor.FullName</h4>
+                        <p>@doctor.Description</p>
+                    </div>
+                </div>
+                                }
+                    }
+                    else
+                    {
+                        <p>No doctors available in this department.</p>
+                    }
+                </div>
+            </div>
+        }
+    </section>
+
+    <script>
+        function toggleDoctors(departmentId) {
+            const el = document.getElementById("doctors-" + departmentId);
+            el.style.display = el.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

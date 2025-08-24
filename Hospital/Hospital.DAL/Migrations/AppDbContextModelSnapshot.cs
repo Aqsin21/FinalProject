@@ -111,7 +111,6 @@ namespace Hospital.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -425,7 +424,7 @@ namespace Hospital.DAL.Migrations
             modelBuilder.Entity("Hospital.DAL.DataContext.Entities.Doctor", b =>
                 {
                     b.HasOne("Hospital.DAL.DataContext.Entities.Department", "Department")
-                        .WithMany()
+                        .WithMany("Doctors")
                         .HasForeignKey("DepartmentId");
 
                     b.Navigation("Department");
@@ -480,6 +479,11 @@ namespace Hospital.DAL.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Hospital.DAL.DataContext.Entities.Department", b =>
+                {
+                    b.Navigation("Doctors");
                 });
 #pragma warning restore 612, 618
         }

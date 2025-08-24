@@ -1,10 +1,15 @@
-﻿namespace Hospital.UI.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace Hospital.UI.Models
 {
     public class LoginViewModel
     {
-        public required string UserName { get; set; }
-        public required string Email { get; set; }
-        public required string Password { get; set; }
+        [Required(ErrorMessage = "Username is required")]
+        public string UserName { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
         public bool RememberMe { get; set; }
     }
 }

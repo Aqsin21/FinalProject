@@ -1,12 +1,15 @@
-using System.Diagnostics;
+using Hospital.DAL.DataContext;
 using Hospital.UI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Hospital.UI.Controllers
 {
     public class HomeController : Controller
     {
-      
+       
+
 
         public IActionResult Index()
         {
@@ -17,7 +20,8 @@ namespace Hospital.UI.Controllers
         {
             return View();
         }
-
         
+
+
     }
 }

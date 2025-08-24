@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Hospital.DAL.DataContext.Entities.Doctor>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/assets/css/Doctors.css">
+    <title>Doctors</title>
+</head>
+<body>
+    <section class="MainNavbar">
+        <a class="MainButton MainHome" href="/">HOME</a>
+        <a class="MainButton Mainabout" href="/about">ABOUT</a>
+        <a class="MainButton MainServices" href="#">SERVICES</a>
+        <a class="MainButton MainDoctors" href="/doctor">DOCTORS</a>
+        <a class="MainButton MainAppoint" href="/appointment">APPOINTMENT</a>
+        <a class="MainButton MainTest" href="#">TESTIMONIAL</a>
+        <a class="MainButton MainBlog" href="/blog">BLOG</a>
+    </section>
+
+    <section class="doctors-section">
+        <h2>Our <span>Doctors</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <div class="doctors-container">
+            @foreach (var doctor in Model)
+            {
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="@(string.IsNullOrEmpty(doctor.ImagePath)
+                                                                 ? Url.Content("~/images/default-doctor.jpg")
+                                                                 : Url.Content(doctor.ImagePath))"
+                         alt="@doctor.FullName" />
+                </div>
+                <div class="doctor-info">
+                    <h3>@doctor.FullName</h3>
+                    <p>@doctor.Department?.Name</p>   @* BURADA Departman Adı *@
+                    <p class="bio">@doctor.Description</p>
+                </div>
+            </div>
+                        }
+        </div>
+    </section>
+</body>
+</html>

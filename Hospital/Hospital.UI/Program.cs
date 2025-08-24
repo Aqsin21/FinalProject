@@ -33,7 +33,7 @@ namespace Hospital.UI
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
                 options.Lockout.MaxFailedAccessAttempts = 5;
 
-                options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedEmail = false;
 
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
