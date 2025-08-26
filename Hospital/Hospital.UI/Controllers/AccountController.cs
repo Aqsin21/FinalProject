@@ -1,8 +1,9 @@
 ﻿using Hospital.DAL.DataContext.Entities;
 using Hospital.UI.Models;
+using Mailing;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace Hospital.UI.Controllers
 {
@@ -10,11 +11,13 @@ namespace Hospital.UI.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly IMailService _mailService;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IMailService mailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _mailService = mailService;
         }
 
         // Register GET
@@ -95,7 +98,73 @@ namespace Hospital.UI.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Index", "Home");
         }
+
+        public async Task<IActionResult> ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(string email)
+        {
+            if(string.IsNullOrEmpty(email))
+                return BadRequest();
+            var user = await _userManager.FindByEmailAsync(email);
+            if(user == null)
+            {
+                ModelState.AddModelError("", "Email Doesn't Found");
+                return View();
+            }
+            var resetToken =await _userManager.GeneratePasswordResetTokenAsync(user);
+            var resetLink= Url.Action("ResetPassword", "Account", new {resetToken,email}, Request.Scheme,Request.Host.ToString());
+            _mailService.SendMail(new Mail { ToEmail = email, Subject = "Reset pas", TextBody = resetLink });
+            return View(nameof(EmailSimulyasiya) ,resetLink);
+
+        }
+        public IActionResult EmailSimulyasiya()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult ResetPassword(string resetToken, string email)
+        {
+            var model = new ResetPasswordViewModel
+            {
+                ResetToken = resetToken,
+                Email = email,
+                  NewPassword = "",
+                ConfirmPassword = ""
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel resetPasswordViewModel)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(resetPasswordViewModel);
+            }
+           var user = await _userManager.FindByEmailAsync(resetPasswordViewModel.Email);
+            if(user == null)
+            {
+                return BadRequest();
+
+                
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, resetPasswordViewModel.ResetToken, resetPasswordViewModel.NewPassword);
+            if (!result.Succeeded)
+            {
+              foreach(var item in result.Errors)
+                    ModelState.AddModelError("",item.Description);
+                return View(resetPasswordViewModel);
+            }  
+            return RedirectToAction(nameof(Login));
+           
+        }
+      
     }
 }

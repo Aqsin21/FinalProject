@@ -1,9 +1,11 @@
-using Hospital.Business.Services.Abstract;
+﻿using Hospital.Business.Services.Abstract;
 using Hospital.Business.Services.Concrete;
 using Hospital.DAL.DataContext;
 using Hospital.DAL.DataContext.Entities;
 using Hospital.DAL.Repositories.Abstract;
 using Hospital.DAL.Repositories.Concret;
+using Mailing;
+using Mailing.MailKitImplementations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,6 +38,19 @@ namespace Hospital.UI
                 options.SignIn.RequireConfirmedEmail = false;
 
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                // Tarayıcı kapanınca cookie silinsin
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                options.SlidingExpiration = true;
+                options.LoginPath = "/Account/Login";
+                options.LogoutPath = "/Account/Logout";
+                options.Cookie.IsEssential = true;
+                options.Cookie.HttpOnly = true;
+
+                // Kalıcı olmasın (RememberMe seçeneği yoksa hep böyle davranır)
+                options.Cookie.MaxAge = null;
+            });
 
             builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             builder.Services.AddScoped<IDepartmentService, DepartmentService>();
@@ -46,6 +61,7 @@ namespace Hospital.UI
             builder.Services.AddScoped<INewsRepository, NewsRepository>();
             builder.Services.AddScoped<INewsService, NewsService>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddTransient<IMailService, MailKitMailService>();
 
 
 
@@ -63,6 +79,7 @@ namespace Hospital.UI
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
             

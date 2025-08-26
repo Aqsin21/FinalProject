@@ -80,7 +80,7 @@
                 </div>
             </nav>
             <div class="custom_bg">
-                <div class="custom_menu">
+                <div class="custom_menu" style="float:left;">
                     <ul>
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a asp-controller="Home" asp-action="About">About</a></li>
@@ -90,15 +90,46 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <form class="form-inline my-2 my-lg-0">
-                    <div class="search_btn">
-                        <li><a asp-controller="Account" asp-action="Login"><i class="fa fa-user" aria-hidden="true"></i><span class="signup_text">Login</span></a></li>
-                        <li><a asp-controller="Account" asp-action="Register"><i class="fa fa-user" aria-hidden="true"></i><span class="signup_text">Sign Up</span></a></li>
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                    </div>
+
+                <div class="search_btn" style="float:right;">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            <a asp-controller="Profile" asp-action="Index">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="signup_text">@User.Identity.Name</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:document.getElementById('logoutForm').submit();">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                <span class="signup_text">Logout</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a asp-controller="Account" asp-action="Login">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="signup_text">Login</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Account" asp-action="Register">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="signup_text">Sign Up</span>
+                            </a>
+                        </li>
+                    }
+
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                </div>
+
+                <form id="logoutForm" asp-controller="Account" asp-action="Logout" method="post" style="display:none;">
+                    @Html.AntiForgeryToken()
                 </form>
             </div>
-        </div>
         <!-- header section end -->
         <!-- banner section start -->
         <div class="banner_section layout_padding">
