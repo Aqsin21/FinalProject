@@ -274,3 +274,6 @@ C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\MailKit.dl
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\MimeKit.dll
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\Mailing.dll
 C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\Mailing.pdb
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\HP\Desktop\HospitalPro\Hospital\Hospital.UI\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

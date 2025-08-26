@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.DAL", "Hospital.DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Business", "Hospital.Business\Hospital.Business.csproj", "{B594D9AD-FB07-4CB6-A767-5DDB64F5D53A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailing", "..\..\Mailing-master\Mailing-master\Mailing.csproj", "{3D6D242A-98B6-2BE3-99B5-61E8C8A5560B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailing", "Mailing\Mailing.csproj", "{1AA01487-9A25-4A1F-886E-E4B839774020}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{B594D9AD-FB07-4CB6-A767-5DDB64F5D53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B594D9AD-FB07-4CB6-A767-5DDB64F5D53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B594D9AD-FB07-4CB6-A767-5DDB64F5D53A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D6D242A-98B6-2BE3-99B5-61E8C8A5560B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D6D242A-98B6-2BE3-99B5-61E8C8A5560B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D6D242A-98B6-2BE3-99B5-61E8C8A5560B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D6D242A-98B6-2BE3-99B5-61E8C8A5560B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA01487-9A25-4A1F-886E-E4B839774020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA01487-9A25-4A1F-886E-E4B839774020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA01487-9A25-4A1F-886E-E4B839774020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA01487-9A25-4A1F-886E-E4B839774020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

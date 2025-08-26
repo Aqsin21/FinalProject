@@ -195,8 +195,8 @@
               "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\Hospital.DAL.csproj": {
                 "projectPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\Hospital.DAL.csproj"
               },
-              "C:\\Users\\HP\\Desktop\\Mailing-master\\Mailing-master\\Mailing.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\Mailing-master\\Mailing-master\\Mailing.csproj"
+              "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\Mailing.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\Mailing.csproj"
               }
             }
           }
@@ -245,14 +245,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\Mailing-master\\Mailing-master\\Mailing.csproj": {
+    "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\Mailing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Mailing-master\\Mailing-master\\Mailing.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\Mailing.csproj",
         "projectName": "Mailing",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Mailing-master\\Mailing-master\\Mailing.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\Mailing.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Mailing-master\\Mailing-master\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -294,19 +294,19 @@
           "dependencies": {
             "MailKit": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[4.13.0, )"
             },
-            "Microsoft.Extensions.Configuration.Abstractions": {
+            "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.2, )"
             },
             "MimeKit": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.13.0, )"
             }
           },
           "imports": [

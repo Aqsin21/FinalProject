@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Mailing-master\Mailing-master\Mailing.csproj" />
     <ProjectReference Include="..\Hospital.Business\Hospital.Business.csproj" />
     <ProjectReference Include="..\Hospital.DAL\Hospital.DAL.csproj" />
+    <ProjectReference Include="..\Mailing\Mailing.csproj" />
   </ItemGroup>
 
   <ItemGroup>
