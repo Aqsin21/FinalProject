@@ -83,7 +83,7 @@ namespace Hospital.UI.Controllers
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, "Username or Password is incorrect");
+                ModelState.AddModelError(string.Empty, "Username or Password is incorrect" );
                 return View(loginViewModel);
             }
 

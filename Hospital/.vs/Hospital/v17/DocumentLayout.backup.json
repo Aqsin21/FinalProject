@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,61 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Program.cs",
-              "RelativeDocumentMoniker": "Hospital.UI\\Program.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Program.cs",
-              "RelativeToolTip": "Hospital.UI\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCMAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T22:53:19.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Models\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "Hospital.UI\\Models\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Models\\LoginViewModel.cs",
-              "RelativeToolTip": "Hospital.UI\\Models\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T22:42:34.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Hospital.UI\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAABMAAAAAAAAAAAAUwDIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-24T22:29:57.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Hospital.UI\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAUwFUAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T20:39:21.056Z",
-              "EditorCaption": ""
             }
           ]
         },

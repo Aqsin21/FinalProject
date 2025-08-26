@@ -1,81 +1,248 @@
 ﻿@model IEnumerable<Hospital.DAL.DataContext.Entities.Department>
 
+<!-- departments section start -->
+<div class="treatment_section">
+    <div class="container">
+        <h1 class="treatment_taital">Our Departments</h1>
+        <p class="text-center" style="color: #6d6d6d; font-size: 16px; margin-top: 20px; margin-bottom: 0;">
+            We provide comprehensive healthcare services across multiple specialized departments with expert medical professionals.
+        </p>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Departments</title>
-    <link rel="stylesheet" href="~/assets/css/Departments.css" />
-    <style>
-        .department {
-            margin-bottom: 20px;
-        }
-        .department h3 {
-            cursor: pointer;
-            background: #0077b6;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .doctor-list {
-            display: none;
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        .doctor-card {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-        .doctor-card img {
-            width: 100px;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
-    <section class="departments-section">
-        <h2>Departments & Doctors</h2>
+        <div class="treatment_section_2">
+            <div class="row">
+                @{
+                    int deptCount = 1;
+                }
+                @foreach (var dept in Model)
+                {
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="department_main_box">
+                            <div class="department_header" onclick="toggleDoctors(@deptCount)">
+                                <div class="department_title_section">
+                                    <div class="number_text">@deptCount.ToString("00")</div>
+                                    <div class="department_info">
+                                        <h3 class="care_text">@dept.Name</h3>
+                                        <p class="department_description">@(dept.Description ?? "Comprehensive medical care and treatment services.")</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown_arrow" id="arrow_@deptCount">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
 
-        @foreach (var department in Model)
-        {
-            <div class="department">
-                <h3 onclick="toggleDoctors('@department.Id')">@department.Name</h3>
-
-                <div id="doctors-@department.Id" class="doctor-list">
-                    @if (department.Doctors.Any())
-                    {
-                        @foreach (var doctor in department.Doctors)
-                        {
-                            <div class="doctor-card">
-                                <img src="@(string.IsNullOrEmpty(doctor.ImagePath)
-                                                                                 ? Url.Content("~/images/default-doctor.jpg")
-                                                                                 : Url.Content(doctor.ImagePath))"
-                         alt="@doctor.FullName" />
-                    <div>
-                        <h4>@doctor.FullName</h4>
-                        <p>@doctor.Description</p>
-                    </div>
-                </div>
+                            <div class="doctors_dropdown" id="doctors_@deptCount" style="display: none;">
+                                @if (dept.Doctors.Any())
+                                {
+                                    <div class="doctors_list">
+                                        <h4 class="doctors_title">Our Doctors</h4>
+                                        @foreach (var doctor in dept.Doctors)
+                                        {
+                                            <div class="doctor_item">
+                                                <div class="doctor_image_container">
+                                                    <img src="@(string.IsNullOrEmpty(doctor.ImagePath) ? Url.Content("~/images/default-doctor.jpg") : Url.Content(doctor.ImagePath))"
+                                                         alt="@doctor.FullName" class="doctor_image" />
+                                                </div>
+                                                <div class="doctor_details">
+                                                    <h5 class="doctor_name">Dr. @doctor.FullName</h5>
+                                                    <p class="doctor_description">@doctor.Description</p>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
                                 }
-                    }
-                    else
-                    {
-                        <p>No doctors available in this department.</p>
-                    }
-                </div>
+                                else
+                                {
+                                    <div class="no_doctors">
+                                        <p class="treatment_text">No doctors currently available in this department.</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    deptCount++;
+                }
             </div>
-        }
-    </section>
+        </div>
+    </div>
+</div>
+<!-- departments section end -->
 
-    <script>
-        function toggleDoctors(departmentId) {
-            const el = document.getElementById("doctors-" + departmentId);
-            el.style.display = el.style.display === "block" ? "none" : "block";
+<style>
+    /* Department specific styles that match your hospital theme */
+    .department_main_box {
+        background-color: #ffffff;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border-left: 5px solid #0cb7d6;
+    }
+
+        .department_main_box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
         }
-    </script>
-</body>
-</html>
+
+    .department_header {
+        display: block;
+        cursor: pointer;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+        .department_header:hover {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin: -5px;
+        }
+
+    .department_title_section {
+        overflow: hidden;
+        padding-right: 40px;
+    }
+
+    .number_text {
+        font-size: 48px;
+        color: #0cb7d6;
+        font-weight: bold;
+        float: left;
+        line-height: 1;
+        margin-right: 20px;
+        margin-bottom: 0;
+        width: 80px;
+    }
+
+    .department_info {
+        overflow: hidden;
+        padding-top: 5px;
+    }
+
+    .care_text {
+        font-size: 24px;
+        color: #252525;
+        font-weight: bold;
+        margin-bottom: 8px;
+        padding-bottom: 0;
+        line-height: 1.2;
+    }
+
+    .department_description {
+        font-size: 14px;
+        color: #6d6d6d;
+        margin: 0;
+        line-height: 1.4;
+        padding-right: 10px;
+    }
+
+    .dropdown_arrow {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #0cb7d6;
+        transition: all 0.3s ease;
+    }
+
+        .dropdown_arrow.rotated {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+    .doctors_dropdown {
+        border-top: 2px solid #f0f0f0;
+        padding-top: 20px;
+        margin-top: 15px;
+    }
+
+    .doctors_title {
+        font-size: 18px;
+        color: #0cb7d6;
+        font-weight: bold;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .doctors_list {
+        width: 100%;
+    }
+
+    .doctor_item {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #e9ecef;
+        overflow: hidden;
+    }
+
+        .doctor_item:hover {
+            background-color: #ffffff;
+            border-color: #0cb7d6;
+            box-shadow: 0px 3px 15px rgba(12, 183, 214, 0.1);
+        }
+
+    .doctor_image_container {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    .doctor_image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #0cb7d6;
+    }
+
+    .doctor_details {
+        overflow: hidden;
+        padding-top: 5px;
+    }
+
+    .doctor_name {
+        font-size: 16px;
+        color: #0cb7d6;
+        font-weight: bold;
+        margin-bottom: 5px;
+        padding-bottom: 0;
+    }
+
+    .doctor_description {
+        font-size: 13px;
+        color: #6d6d6d;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .no_doctors {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+    }
+
+        .no_doctors .treatment_text {
+            color: #6d6d6d;
+            font-style: italic;
+            margin: 0;
+        }
+</style>
+
+<script>
+    function toggleDoctors(deptId) {
+        var doctorsDiv = document.getElementById('doctors_' + deptId);
+        var arrow = document.getElementById('arrow_' + deptId);
+
+        if (doctorsDiv.style.display === 'none' || doctorsDiv.style.display === '') {
+            doctorsDiv.style.display = 'block';
+            arrow.classList.add('rotated');
+        } else {
+            doctorsDiv.style.display = 'none';
+            arrow.classList.remove('rotated');
+        }
+    }
+</script>
