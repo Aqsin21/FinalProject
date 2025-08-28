@@ -92,6 +92,7 @@ wwwroot\css\bootstrap-reboot.css.map
 wwwroot\css\bootstrap-reboot.min.css
 wwwroot\css\bootstrap-reboot.min.css.map
 wwwroot\css\default-skin.css
+wwwroot\css\error.css
 wwwroot\css\font-awesome.min.css
 wwwroot\css\icomoon.css
 wwwroot\css\jquery.fancybox.min.css

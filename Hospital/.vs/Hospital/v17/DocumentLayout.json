@@ -3,52 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\mailing\\mailkitimplementations\\mailkitmailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|solutionrelative:mailing\\mailkitimplementations\\mailkitmailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\error\\401.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\error\\401.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\mailing\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|solutionrelative:mailing\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\mailing\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|solutionrelative:mailing\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\mailing\\mail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AA01487-9A25-4A1F-886E-E4B839774020}|Mailing\\Mailing.csproj|solutionrelative:mailing\\mail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\models\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\models\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\account\\emailsimulyasiya.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\account\\emailsimulyasiya.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\error\\error403.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\error\\error403.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\error\\error404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\error\\error404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\wwwroot\\css\\error.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\wwwroot\\css\\error.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\appointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\appointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\error\\error500.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\error\\error500.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,164 +57,127 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "Hospital.UI\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T16:02:21.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MailSettings.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\MailSettings.cs",
-              "RelativeDocumentMoniker": "Mailing\\MailSettings.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\MailSettings.cs",
-              "RelativeToolTip": "Mailing\\MailSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:20:29.583Z",
-              "EditorCaption": ""
+              "DocumentIndex": 9,
+              "Title": "Error500.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\Error500.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Error\\Error500.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\Error500.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Error\\Error500.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T15:55:37.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Mail.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\Mail.cs",
-              "RelativeDocumentMoniker": "Mailing\\Mail.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\Mail.cs",
-              "RelativeToolTip": "Mailing\\Mail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:20:03.56Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "Error404.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\Error404.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Error\\Error404.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\Error404.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Error\\Error404.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T15:55:08.805Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IMailService.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\IMailService.cs",
-              "RelativeDocumentMoniker": "Mailing\\IMailService.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\IMailService.cs",
-              "RelativeToolTip": "Mailing\\IMailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:19:38.657Z",
+              "Title": "Error403.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\Error403.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Error\\Error403.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\Error403.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Error\\Error403.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T15:54:38.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MailKitMailService.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\MailKitImplementations\\MailKitMailService.cs",
-              "RelativeDocumentMoniker": "Mailing\\MailKitImplementations\\MailKitMailService.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Mailing\\MailKitImplementations\\MailKitMailService.cs",
-              "RelativeToolTip": "Mailing\\MailKitImplementations\\MailKitMailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T21:18:56.567Z",
+              "Title": "401.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\401.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Error\\401.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Error\\401.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Error\\401.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T15:53:04.143Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Program.cs",
               "RelativeDocumentMoniker": "Hospital.UI\\Program.cs",
               "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Program.cs",
               "RelativeToolTip": "Hospital.UI\\Program.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAQwD8AAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T20:13:19.053Z",
+              "WhenOpened": "2025-08-28T15:49:15.706Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResetPasswordViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Models\\ResetPasswordViewModel.cs",
-              "RelativeDocumentMoniker": "Hospital.UI\\Models\\ResetPasswordViewModel.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Models\\ResetPasswordViewModel.cs",
-              "RelativeToolTip": "Hospital.UI\\Models\\ResetPasswordViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ErrorController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\ErrorController.cs",
+              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\ErrorController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\ErrorController.cs",
+              "RelativeToolTip": "Hospital.UI\\Controllers\\ErrorController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T19:32:40.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ResetPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Account\\ResetPassword.cshtml",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeToolTip": "Hospital.UI\\Views\\Account\\ResetPassword.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwDMAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T19:22:19.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Hospital.UI\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAwCMAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T19:19:42.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Account\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeToolTip": "Hospital.UI\\Views\\Account\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T19:07:12.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Hospital.UI\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAIwKkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T19:06:01.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-28T15:45:55.295Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "EmailSimulyasiya.cshtml",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\EmailSimulyasiya.cshtml",
-              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Account\\EmailSimulyasiya.cshtml",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Account\\EmailSimulyasiya.cshtml",
-              "RelativeToolTip": "Hospital.UI\\Views\\Account\\EmailSimulyasiya.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-26T20:52:39.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-28T16:00:58.169Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\appsettings.json",
-              "RelativeDocumentMoniker": "Hospital.UI\\appsettings.json",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\appsettings.json",
-              "RelativeToolTip": "Hospital.UI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-26T20:41:31.797Z",
-              "EditorCaption": ""
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAiwEYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T16:02:44.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "error.css",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\wwwroot\\css\\error.css",
+              "RelativeDocumentMoniker": "Hospital.UI\\wwwroot\\css\\error.css",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\wwwroot\\css\\error.css",
+              "RelativeToolTip": "Hospital.UI\\wwwroot\\css\\error.css",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAcwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-28T16:22:13.069Z"
             }
           ]
         },

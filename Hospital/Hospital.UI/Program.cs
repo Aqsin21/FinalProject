@@ -16,8 +16,6 @@ namespace Hospital.UI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AppDbContext>(option =>
             {
@@ -31,25 +29,27 @@ namespace Hospital.UI
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.User.RequireUniqueEmail = true;
-
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
                 options.Lockout.MaxFailedAccessAttempts = 5;
-
                 options.SignIn.RequireConfirmedEmail = false;
 
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
             builder.Services.ConfigureApplicationCookie(options =>
             {
-                // Tarayıcı kapanınca cookie silinsin
+                options.LoginPath = "/Account/Login"; // 👈 login olmayan buraya gider
+                options.LogoutPath = "/Account/Logout";
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 options.SlidingExpiration = true;
-                options.LoginPath = "/Account/Login";
-                options.LogoutPath = "/Account/Logout";
                 options.Cookie.IsEssential = true;
                 options.Cookie.HttpOnly = true;
 
-                // Kalıcı olmasın (RememberMe seçeneği yoksa hep böyle davranır)
-                options.Cookie.MaxAge = null;
+                // Status code yerine direkt redirect olsun
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    context.Response.Redirect(context.RedirectUri); // redirect LoginPath
+                    return Task.CompletedTask;
+                };
             });
 
             builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
@@ -63,30 +63,32 @@ namespace Hospital.UI
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddTransient<IMailService, MailKitMailService>();
 
-
-
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Production exception handler should be first
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseExceptionHandler("/Error/500");
                 app.UseHsts();
             }
+            else
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            // Status code pages middleware should be early in the pipeline
+            app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-            app.UseAuthentication();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-            
 
             app.MapControllerRoute(
-           name: "areas",
-           pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+                name: "areas",
+                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
             app.MapControllerRoute(
                 name: "default",
