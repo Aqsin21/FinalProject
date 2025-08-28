@@ -7,15 +7,26 @@
                 <h1 class="doctores_taital">Our Doctors</h1>
             </div>
         </div>
-        <div class="row">
+
+        <!-- Search input -->
+        <div class="row mb-4">
+            <div class="col-md-12 d-flex align-items-center">
+                <input type="text" id="doctorSearch" class="form-control me-2"
+                       placeholder="Enter the name of the doctor you are looking for "
+                       style="max-width: 250px; height:40px" />
+                <button type="button" class="btn btn-primary h-100" id="searchButton">Search</button>
+            </div>
+        </div>
+
+        <div class="row" id="doctorContainer">
             @foreach (var doctor in Model)
             {
                 <div class="col-md-4">
                     <div class="doctores_box">
                         <div class="image_1">
                             <img src="@(string.IsNullOrEmpty(doctor.ImagePath)
-                                                                          ? Url.Content("~/images/default-doctor.jpg")
-                                                                          : Url.Content(doctor.ImagePath))" />
+                                                                               ? Url.Content("~/images/default-doctor.jpg")
+                                                                               : Url.Content(doctor.ImagePath))" />
                     </div>
                     <h4 class="humour_text">@doctor.FullName <br></h4>
                     <p>@doctor.Department?.Name</p>  @* Departman adı *@
@@ -33,3 +44,30 @@
         </div>
     </div>
 </div>
+
+<script>
+    const searchInput = document.getElementById('doctorSearch');
+    const searchButton = document.getElementById('searchButton');
+    const doctorBoxes = document.querySelectorAll('.doctores_box');
+
+    function filterDoctors() {
+        const filter = searchInput.value.toLowerCase().trim();
+
+        doctorBoxes.forEach(box => {
+            const name = box.querySelector('h4').innerText.toLowerCase();
+            const department = box.querySelector('p') ? box.querySelector('p').innerText.toLowerCase() : '';
+
+            if(name.includes(filter) || department.includes(filter)) {
+                box.parentElement.style.display = ''; // göster
+            } else {
+                box.parentElement.style.display = 'none'; // gizle
+            }
+        });
+    }
+
+    // Input değiştikçe filtrele
+    searchInput.addEventListener('input', filterDoctors);
+
+    // Butona basınca filtrele
+    searchButton.addEventListener('click', filterDoctors);
+</script>
