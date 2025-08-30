@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Hospital.DAL.DataContext.Entities.Doctor>
+﻿@model DoctorListViewModel
 
 <div class="doctores_section margim_90">
     <div class="container">
@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <!-- Search input -->
+      
         <div class="row mb-4">
             <div class="col-md-12 d-flex align-items-center">
                 <input type="text" id="doctorSearch" class="form-control me-2"
@@ -19,7 +19,7 @@
         </div>
 
         <div class="row" id="doctorContainer">
-            @foreach (var doctor in Model)
+            @foreach (var doctor in Model.Doctors)
             {
                 <div class="col-md-4">
                     <div class="doctores_box">
@@ -29,15 +29,16 @@
                                                                                : Url.Content(doctor.ImagePath))" />
                     </div>
                     <h4 class="humour_text">@doctor.FullName <br></h4>
-                    <p>@doctor.Department?.Name</p>  @* Departman adı *@
-                    <div class="social_icon">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
+                    <p>@doctor.Department?.Name</p>  
+                    <form asp-controller="Doctor" asp-action="ToggleFavorite" method="post" class="favorite-form">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="doctorId" value="@doctor.Id" />
+                        <button type="submit" class="btn btn-link p-0">
+                            <i class="@(Model.UserFavoriteDoctorIds.Contains(doctor.Id)
+                                                   ? "fa fa-heart text-danger"
+                                                   : "fa fa-heart-o")" aria-hidden="true"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
                         }
@@ -58,16 +59,16 @@
             const department = box.querySelector('p') ? box.querySelector('p').innerText.toLowerCase() : '';
 
             if(name.includes(filter) || department.includes(filter)) {
-                box.parentElement.style.display = ''; // göster
+                box.parentElement.style.display = ''; 
             } else {
-                box.parentElement.style.display = 'none'; // gizle
+                box.parentElement.style.display = 'none'; 
             }
         });
     }
 
-    // Input değiştikçe filtrele
+    
     searchInput.addEventListener('input', filterDoctors);
 
-    // Butona basınca filtrele
+   
     searchButton.addEventListener('click', filterDoctors);
 </script>

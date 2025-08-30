@@ -1,7 +1,6 @@
 ﻿using Hospital.DAL.DataContext.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
 namespace Hospital.DAL.DataContext
 {
     public class AppDbContext:IdentityDbContext
@@ -14,5 +13,6 @@ namespace Hospital.DAL.DataContext
         public DbSet<Department> Departments { get; set; }
         public DbSet<News> Newss { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
     }
 }
