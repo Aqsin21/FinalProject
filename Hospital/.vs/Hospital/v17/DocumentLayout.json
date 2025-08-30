@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\appointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\appointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B55C6307-D53C-4374-9067-3AB2A5688082}|Hospital.DAL\\Hospital.DAL.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.dal\\datacontext\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B55C6307-D53C-4374-9067-3AB2A5688082}|Hospital.DAL\\Hospital.DAL.csproj|solutionrelative:hospital.dal\\datacontext\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\doctor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\doctor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -14,24 +34,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Appointment\\Index.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAiwGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-30T22:37:33.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\DataContext\\Entities\\Appointment.cs",
+              "RelativeDocumentMoniker": "Hospital.DAL\\DataContext\\Entities\\Appointment.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\DataContext\\Entities\\Appointment.cs",
+              "RelativeToolTip": "Hospital.DAL\\DataContext\\Entities\\Appointment.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T22:35:40.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "Hospital.UI\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T22:34:29.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "Hospital.UI\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T22:32:13.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-30T22:29:08.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Doctor\\Index.cshtml",
               "RelativeDocumentMoniker": "Hospital.UI\\Views\\Doctor\\Index.cshtml",
               "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Doctor\\Index.cshtml",
               "RelativeToolTip": "Hospital.UI\\Views\\Doctor\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwEkAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwAYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-30T22:07:49.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-30T22:07:49.251Z"
             }
           ]
         },
