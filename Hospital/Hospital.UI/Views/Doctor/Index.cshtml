@@ -29,16 +29,12 @@
                                                                                : Url.Content(doctor.ImagePath))" />
                     </div>
                     <h4 class="humour_text">@doctor.FullName <br></h4>
-                    <p>@doctor.Department?.Name</p>  
-                    <form asp-controller="Doctor" asp-action="ToggleFavorite" method="post" class="favorite-form">
-                        @Html.AntiForgeryToken()
-                        <input type="hidden" name="doctorId" value="@doctor.Id" />
-                        <button type="submit" class="btn btn-link p-0">
-                            <i class="@(Model.UserFavoriteDoctorIds.Contains(doctor.Id)
+                    <p>@doctor.Department?.Name</p>
+                    <button class="btn btn-link p-0 favorite-btn" data-doctorid="@doctor.Id">
+                        <i class="@(Model.UserFavoriteDoctorIds.Contains(doctor.Id)
                                                    ? "fa fa-heart text-danger"
                                                    : "fa fa-heart-o")" aria-hidden="true"></i>
-                        </button>
-                    </form>
+                    </button>
                 </div>
             </div>
                         }
@@ -71,4 +67,39 @@
 
    
     searchButton.addEventListener('click', filterDoctors);
+</script>
+<script>
+document.querySelectorAll('.favorite-btn').forEach(btn => {
+    btn.addEventListener('click', async function(e) {
+        e.preventDefault(); 
+        const doctorId = this.dataset.doctorid;
+        const icon = this.querySelector('i');
+
+        try {
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+
+            const response = await fetch('@Url.Action("ToggleFavorite", "Doctor")', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'RequestVerificationToken': token
+                },
+                body: new URLSearchParams({ doctorId })
+            });
+
+            if (response.ok) {
+                // Kalp rengini toggle et
+                if(icon.classList.contains('text-danger')){
+                    icon.classList.remove('fa-heart', 'text-danger');
+                    icon.classList.add('fa-heart-o');
+                } else {
+                    icon.classList.remove('fa-heart-o');
+                    icon.classList.add('fa-heart', 'text-danger');
+                }
+            }
+        } catch(err) {
+            console.error(err);
+        }
+    });
+});
 </script>
