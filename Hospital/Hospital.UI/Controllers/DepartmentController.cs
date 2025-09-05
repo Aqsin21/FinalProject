@@ -14,12 +14,24 @@ namespace Hospital.UI.Controllers
             _dbContext = dbContext;
         }
 
-        public async Task<IActionResult> Index()
+        // Ana sayfa, boş view döndürüyoruz, veri AJAX ile yüklenecek
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        // Load More için AJAX endpoint
+        public async Task<IActionResult> LoadMore(int skip = 0, int take = 4)
         {
             var departments = await _dbContext.Departments
                 .Include(d => d.Doctors)
+                .OrderBy(d => d.Id)
+                .Skip(skip)
+                .Take(take)
                 .ToListAsync();
-            return View(departments);
+
+            ViewBag.Skip = skip; // deptCount için
+            return PartialView("_DepartmentListPartial", departments);
         }
     }
 }

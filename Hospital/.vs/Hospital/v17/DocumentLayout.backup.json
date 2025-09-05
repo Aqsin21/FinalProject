@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B55C6307-D53C-4374-9067-3AB2A5688082}|Hospital.DAL\\Hospital.DAL.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.dal\\datainitialize\\datainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B55C6307-D53C-4374-9067-3AB2A5688082}|Hospital.DAL\\Hospital.DAL.csproj|solutionrelative:hospital.dal\\datainitialize\\datainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\Migrations\\20250905161728_DataInitiliazer created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hospital.DAL\\Migrations\\20250905161728_DataInitiliazer created.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\department\\_departmentlistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\department\\_departmentlistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.ui\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F59B462-4CB5-4E76-A798-2FF7796E1BB5}|Hospital.UI\\Hospital.UI.csproj|solutionrelative:hospital.ui\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B55C6307-D53C-4374-9067-3AB2A5688082}|Hospital.DAL\\Hospital.DAL.csproj|c:\\users\\hp\\desktop\\hospitalpro\\hospital\\hospital.dal\\datainitialize\\datainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B55C6307-D53C-4374-9067-3AB2A5688082}|Hospital.DAL\\Hospital.DAL.csproj|solutionrelative:hospital.dal\\datainitialize\\datainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,66 +39,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "20250905161728_DataInitiliazer created.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\Migrations\\20250905161728_DataInitiliazer created.cs",
-              "RelativeDocumentMoniker": "Hospital.DAL\\Migrations\\20250905161728_DataInitiliazer created.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\Migrations\\20250905161728_DataInitiliazer created.cs",
-              "RelativeToolTip": "Hospital.DAL\\Migrations\\20250905161728_DataInitiliazer created.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T16:17:28.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\DepartmentController.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\DepartmentController.cs",
-              "RelativeToolTip": "Hospital.UI\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T16:15:24.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\appsettings.json",
-              "RelativeDocumentMoniker": "Hospital.UI\\appsettings.json",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\appsettings.json",
-              "RelativeToolTip": "Hospital.UI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-05T16:13:58.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Program.cs",
-              "RelativeDocumentMoniker": "Hospital.UI\\Program.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Program.cs",
-              "RelativeToolTip": "Hospital.UI\\Program.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAwGcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T16:11:47.067Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Department\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Department\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Department\\Index.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Department\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T16:54:57.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_DepartmentListPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Department\\_DepartmentListPartial.cshtml",
+              "RelativeDocumentMoniker": "Hospital.UI\\Views\\Department\\_DepartmentListPartial.cshtml",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Views\\Department\\_DepartmentListPartial.cshtml",
+              "RelativeToolTip": "Hospital.UI\\Views\\Department\\_DepartmentListPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-05T16:54:05.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DataInitializer.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\DataInitialize\\DataInitializer.cs",
               "RelativeDocumentMoniker": "Hospital.DAL\\DataInitialize\\DataInitializer.cs",
               "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.DAL\\DataInitialize\\DataInitializer.cs",
               "RelativeToolTip": "Hospital.DAL\\DataInitialize\\DataInitializer.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAQwEEAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T16:10:00.592Z",
+              "WhenOpened": "2025-09-05T16:50:47.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "Hospital.UI\\Controllers\\DepartmentController.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\HospitalPro\\Hospital\\Hospital.UI\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "Hospital.UI\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T16:45:19.81Z",
               "EditorCaption": ""
             }
           ]

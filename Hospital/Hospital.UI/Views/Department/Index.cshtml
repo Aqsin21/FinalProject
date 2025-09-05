@@ -9,62 +9,56 @@
         </p>
 
         <div class="treatment_section_2">
-            <div class="row">
-                @{
-                    int deptCount = 1;
-                }
-                @foreach (var dept in Model)
-                {
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="department_main_box">
-                            <div class="department_header" onclick="toggleDoctors(@deptCount)">
-                                <div class="department_title_section">
-                                    <div class="number_text">@deptCount.ToString("00")</div>
-                                    <div class="department_info">
-                                        <h3 class="care_text">@dept.Name</h3>
-                                        <p class="department_description">@(dept.Description ?? "Comprehensive medical care and treatment services.")</p>
-                                    </div>
-                                </div>
-                                <div class="dropdown_arrow" id="arrow_@deptCount">
-                                    <i class="fa fa-chevron-down"></i>
-                                </div>
-                            </div>
-
-                            <div class="doctors_dropdown" id="doctors_@deptCount" style="display: none;">
-                                @if (dept.Doctors.Any())
-                                {
-                                    <div class="doctors_list">
-                                        <h4 class="doctors_title">Our Doctors</h4>
-                                        @foreach (var doctor in dept.Doctors)
-                                        {
-                                            <div class="doctor_item">
-                                                <div class="doctor_image_container">
-                                                    <img src="@(string.IsNullOrEmpty(doctor.ImagePath) ? Url.Content("~/images/default-doctor.jpg") : Url.Content(doctor.ImagePath))"
-                                                         alt="@doctor.FullName" class="doctor_image" />
-                                                </div>
-                                                <div class="doctor_details">
-                                                    <h5 class="doctor_name">Dr. @doctor.FullName</h5>
-                                                    <p class="doctor_description">@doctor.Description</p>
-                                                </div>
-                                            </div>
-                                        }
-                                    </div>
-                                }
-                                else
-                                {
-                                    <div class="no_doctors">
-                                        <p class="treatment_text">No doctors currently available in this department.</p>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                    deptCount++;
-                }
+            <div class="row" id="department-container">
+                <!-- İlk 4 departman AJAX ile buraya yüklenecek -->
             </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button id="loadMoreBtn" class="btn btn-primary">Load More</button>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let skip = 0;
+        const take = 4;
+
+        function loadDepartments() {
+            $.get('@Url.Action("LoadMore")', { skip: skip, take: take }, function(data) {
+                if(data.trim() === '') {
+                    $('#loadMoreBtn').hide();
+                } else {
+                    $('#department-container').append(data);
+                    skip += take;
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            loadDepartments(); // İlk 4 departmanı yükle
+
+            $('#loadMoreBtn').click(function() {
+                loadDepartments();
+            });
+        });
+
+        function toggleDoctors(deptId) {
+            var doctorsDiv = document.getElementById('doctors_' + deptId);
+            var arrow = document.getElementById('arrow_' + deptId);
+
+            if (doctorsDiv.style.display === 'none' || doctorsDiv.style.display === '') {
+                doctorsDiv.style.display = 'block';
+                arrow.classList.add('rotated');
+            } else {
+                doctorsDiv.style.display = 'none';
+                arrow.classList.remove('rotated');
+            }
+        }
+    </script>
+}
 <!-- departments section end -->
 
 <style>
