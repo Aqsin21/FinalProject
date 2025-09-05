@@ -2,6 +2,7 @@
 using Hospital.Business.Services.Concrete;
 using Hospital.DAL.DataContext;
 using Hospital.DAL.DataContext.Entities;
+using Hospital.DAL.DataInitialize;
 using Hospital.DAL.Repositories.Abstract;
 using Hospital.DAL.Repositories.Concret;
 using Mailing;
@@ -62,8 +63,47 @@ namespace Hospital.UI
             builder.Services.AddScoped<INewsService, NewsService>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddTransient<IMailService, MailKitMailService>();
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                // User login
+                options.LoginPath = "/Account/Login";
+
+                // Admin login
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    var path = context.Request.Path;
+                    if (path.StartsWithSegments("/Admin"))
+                    {
+                        context.Response.Redirect("/Admin/Account/Login");
+                    }
+                    else
+                    {
+                        context.Response.Redirect(context.RedirectUri); // Normal user login
+                    }
+                    return Task.CompletedTask;
+                };
+            });
 
             var app = builder.Build();
+            using (var scope = app.Services.CreateScope())
+            {
+                try
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                    Console.WriteLine("Retrieved DbContext successfully.");
+
+                    DataInitializer.Seed(context);
+                    Console.WriteLine("Database initialization completed.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Failed to initialize database: {ex.Message}");
+                    // Decide if you want to continue or stop the application
+                    // throw; // Uncomment to stop app if DB init fails
+                }
+            }
+
+
 
             // Production exception handler should be first
             if (!app.Environment.IsDevelopment())
@@ -96,5 +136,6 @@ namespace Hospital.UI
 
             app.Run();
         }
+
     }
 }
