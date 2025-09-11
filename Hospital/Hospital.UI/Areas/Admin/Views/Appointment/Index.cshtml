@@ -1,0 +1,45 @@
+﻿@using Hospital.DAL.DataContext.Entities
+@model List<Appointment>
+
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4">Appointments</h4>
+
+        <div class="card">
+            <h5 class="card-header">Appointments List</h5>
+            <div class="table-responsive text-nowrap">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Doctor</th>
+                            <th>Date</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.FullName</td>
+                                <td>@item.PhoneNumber</td>
+                                <td>@item.Email</td>
+                                <td>@(item.Department?.Name ?? "N/A")</td>
+                                <td>@(item.Doctor?.FullName ?? "N/A")</td>
+                                <td>@item.AppointmentDate.ToString("dd.MM.yyyy HH:mm")</td>
+                                <td>
+                                    <form asp-area="Admin" asp-controller="Appointment" asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this appointment?');">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

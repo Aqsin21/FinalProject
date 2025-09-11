@@ -1,0 +1,13 @@
+﻿@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/error.css" />
+
+<div class="error-container">
+    <div class="error-code">403</div>
+    <div class="error-message">You don’t have permission to view this page.</div>
+    <div class="error-actions">
+        <a asp-controller="Home" asp-action="Index" class="btn-home">Go Home</a>
+        <a asp-controller="Account" asp-action="Logout" class="btn-login">Logout</a>
+    </div>
+</div>

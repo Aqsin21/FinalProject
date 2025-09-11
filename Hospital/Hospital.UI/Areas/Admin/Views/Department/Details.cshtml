@@ -1,0 +1,17 @@
+﻿@model Hospital.DAL.DataContext.Entities.Department
+
+<div class="container mt-4">
+    <h2>Department Details</h2>
+
+    <div class="mb-3">
+        <h4>Name:</h4>
+        <p>@Model.Name</p>
+    </div>
+
+    <div class="mb-3">
+        <h4>Description:</h4>
+        <p>@Model.Description</p>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>
+</div>

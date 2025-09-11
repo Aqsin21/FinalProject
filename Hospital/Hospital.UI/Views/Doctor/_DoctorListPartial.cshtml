@@ -1,0 +1,21 @@
+﻿@model DoctorListViewModel
+
+@foreach (var doctor in Model.Doctors)
+{
+    <div class="col-md-4">
+        <div class="doctores_box">
+            <div class="image_1">
+                <img src="@(string.IsNullOrEmpty(doctor.ImagePath)
+                                         ? Url.Content("~/images/default-doctor.jpg")
+                                         : Url.Content(doctor.ImagePath))" />
+        </div>
+        <h4 class="humour_text">@doctor.FullName <br></h4>
+        <p>@doctor.Department?.Name</p>
+        <button class="btn btn-link p-0 favorite-btn" data-doctorid="@doctor.Id">
+            <i class="@(Model.UserFavoriteDoctorIds.Contains(doctor.Id)
+                                   ? "fa fa-heart text-danger"
+                                   : "fa fa-heart-o")" aria-hidden="true"></i>
+        </button>
+    </div>
+</div>
+}

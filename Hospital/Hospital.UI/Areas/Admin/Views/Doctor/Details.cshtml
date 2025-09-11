@@ -1,0 +1,41 @@
+﻿@model Hospital.DAL.DataContext.Entities.Doctor
+
+<div class="container mt-4">
+    <h2>Doctor Details</h2>
+
+    <div class="mb-3">
+        <label class="form-label">Full Name:</label>
+        <p class="form-control">@Model.FullName</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Department:</label>
+        <p class="form-control">@Model.Department?.Name</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Description:</label>
+        <p class="form-control">@Model.Description</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Doctor Image:</label><br />
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <img src="@Model.ImagePath" alt="Doctor Image" width="150" class="rounded shadow" />
+        }
+        else
+        {
+            <p class="text-muted">No image available.</p>
+        }
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Price:</label>
+        <p class="form-control">
+            @(Model.Price.HasValue ? $"{Model.Price.Value:0.00} ₼" : "Not specified")
+        </p>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

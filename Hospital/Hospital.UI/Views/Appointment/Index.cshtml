@@ -1,0 +1,104 @@
+﻿<div class="appointment_section">
+    <div class="container">
+        <div class="appointment_box">
+            <h1 class="appointment_taital">Book <span style="color: #0cb7d6;">Appointment</span></h1>
+
+            <!-- Success mesaj alanı -->
+            <div id="successMessage" class="alert alert-success mt-2" style="display:none;"></div>
+
+            <form id="appointmentForm" asp-action="Create" method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="doctorname_text">Patient Name</p>
+                        <input type="text" class="email_text" name="fullName" required />
+                    </div>
+                    <div class="col-md-4">
+                        <p class="doctorname_text">Phone Number</p>
+                        <input type="text" class="email_text" name="phoneNumber" required />
+                    </div>
+                    <div class="col-md-4">
+                        <p class="doctorname_text">Email</p>
+                        <input type="email" class="email_text" name="email" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="doctorname_text">Address (optional)</p>
+                        <input type="text" class="email_text" name="address" />
+                    </div>
+                    <div class="col-md-4">
+                        <p class="doctorname_text">Department</p>
+                        <select class="form-control" name="departmentId" id="departmentSelect" required>
+                            <option value="">Select Department</option>
+                            @foreach (var dept in ViewBag.Departments)
+                            {
+                                <option value="@dept.Id">@dept.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="doctorname_text">Doctor</p>
+                        <select class="form-control" name="doctorId" id="doctorSelect" required>
+                            <option value="">Select Doctor</option>
+                            @foreach (var doc in ViewBag.Doctors)
+                            {
+                                <option value="@doc.Id" data-dept="@doc.DepartmentId">@doc.FullName</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="doctorname_text">Choose Date & Time</p>
+                        <input type="datetime-local" class="email_text" name="appointmentDate" required />
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Department seçimine göre doctor dropdown filtreleme
+    document.getElementById('departmentSelect').addEventListener('change', function() {
+        const deptId = this.value;
+        const doctorSelect = document.getElementById('doctorSelect');
+        Array.from(doctorSelect.options).forEach(option => {
+            if(option.value === "" || option.dataset.dept === deptId) {
+                option.style.display = '';
+            } else {
+                option.style.display = 'none';
+            }
+        });
+        doctorSelect.value = ""; // Reset selected doctor
+    });
+
+    // Formu AJAX ile submit etme ve Stripe yönlendirmesi
+    document.getElementById('appointmentForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if(result.success){
+            // Stripe Checkout sayfasına yönlendir
+            window.location.href = result.url;
+        } else {
+            alert(result.message || "Something went wrong. Please check the input.");
+        }
+    });
+</script>

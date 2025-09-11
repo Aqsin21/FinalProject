@@ -1,0 +1,242 @@
+﻿@model IEnumerable<Hospital.DAL.DataContext.Entities.Department>
+
+<!-- departments section start -->
+<div class="treatment_section">
+    <div class="container">
+        <h1 class="treatment_taital">Our Departments</h1>
+        <p class="text-center" style="color: #6d6d6d; font-size: 16px; margin-top: 20px; margin-bottom: 0;">
+            We provide comprehensive healthcare services across multiple specialized departments with expert medical professionals.
+        </p>
+
+        <div class="treatment_section_2">
+            <div class="row" id="department-container">
+                <!-- İlk 4 departman AJAX ile buraya yüklenecek -->
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button id="loadMoreBtn" class="btn btn-primary">Load More</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let skip = 0;
+        const take = 4;
+
+        function loadDepartments() {
+            $.get('@Url.Action("LoadMore")', { skip: skip, take: take }, function(data) {
+                if(data.trim() === '') {
+                    $('#loadMoreBtn').hide();
+                } else {
+                    $('#department-container').append(data);
+                    skip += take;
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            loadDepartments(); // İlk 4 departmanı yükle
+
+            $('#loadMoreBtn').click(function() {
+                loadDepartments();
+            });
+        });
+
+        function toggleDoctors(deptId) {
+            var doctorsDiv = document.getElementById('doctors_' + deptId);
+            var arrow = document.getElementById('arrow_' + deptId);
+
+            if (doctorsDiv.style.display === 'none' || doctorsDiv.style.display === '') {
+                doctorsDiv.style.display = 'block';
+                arrow.classList.add('rotated');
+            } else {
+                doctorsDiv.style.display = 'none';
+                arrow.classList.remove('rotated');
+            }
+        }
+    </script>
+}
+<!-- departments section end -->
+
+<style>
+    /* Department specific styles that match your hospital theme */
+    .department_main_box {
+        background-color: #ffffff;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border-left: 5px solid #0cb7d6;
+    }
+
+        .department_main_box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+        }
+
+    .department_header {
+        display: block;
+        cursor: pointer;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+        .department_header:hover {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin: -5px;
+        }
+
+    .department_title_section {
+        overflow: hidden;
+        padding-right: 40px;
+    }
+
+    .number_text {
+        font-size: 48px;
+        color: #0cb7d6;
+        font-weight: bold;
+        float: left;
+        line-height: 1;
+        margin-right: 20px;
+        margin-bottom: 0;
+        width: 80px;
+    }
+
+    .department_info {
+        overflow: hidden;
+        padding-top: 5px;
+    }
+
+    .care_text {
+        font-size: 24px;
+        color: #252525;
+        font-weight: bold;
+        margin-bottom: 8px;
+        padding-bottom: 0;
+        line-height: 1.2;
+    }
+
+    .department_description {
+        font-size: 14px;
+        color: #6d6d6d;
+        margin: 0;
+        line-height: 1.4;
+        padding-right: 10px;
+    }
+
+    .dropdown_arrow {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #0cb7d6;
+        transition: all 0.3s ease;
+    }
+
+        .dropdown_arrow.rotated {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+    .doctors_dropdown {
+        border-top: 2px solid #f0f0f0;
+        padding-top: 20px;
+        margin-top: 15px;
+    }
+
+    .doctors_title {
+        font-size: 18px;
+        color: #0cb7d6;
+        font-weight: bold;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .doctors_list {
+        width: 100%;
+    }
+
+    .doctor_item {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #e9ecef;
+        overflow: hidden;
+    }
+
+        .doctor_item:hover {
+            background-color: #ffffff;
+            border-color: #0cb7d6;
+            box-shadow: 0px 3px 15px rgba(12, 183, 214, 0.1);
+        }
+
+    .doctor_image_container {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    .doctor_image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #0cb7d6;
+    }
+
+    .doctor_details {
+        overflow: hidden;
+        padding-top: 5px;
+    }
+
+    .doctor_name {
+        font-size: 16px;
+        color: #0cb7d6;
+        font-weight: bold;
+        margin-bottom: 5px;
+        padding-bottom: 0;
+    }
+
+    .doctor_description {
+        font-size: 13px;
+        color: #6d6d6d;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .no_doctors {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+    }
+
+        .no_doctors .treatment_text {
+            color: #6d6d6d;
+            font-style: italic;
+            margin: 0;
+        }
+</style>
+
+<script>
+    function toggleDoctors(deptId) {
+        var doctorsDiv = document.getElementById('doctors_' + deptId);
+        var arrow = document.getElementById('arrow_' + deptId);
+
+        if (doctorsDiv.style.display === 'none' || doctorsDiv.style.display === '') {
+            doctorsDiv.style.display = 'block';
+            arrow.classList.add('rotated');
+        } else {
+            doctorsDiv.style.display = 'none';
+            arrow.classList.remove('rotated');
+        }
+    }
+</script>

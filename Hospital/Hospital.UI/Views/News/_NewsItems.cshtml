@@ -1,0 +1,16 @@
+﻿@model List<Hospital.DAL.DataContext.Entities.News>
+
+@foreach (var item in Model)
+{
+    <div class="col-md-4 mb-3 news_box">
+        <div class="card shadow-sm p-3">
+            @if (!string.IsNullOrEmpty(item.ImagePath))
+            {
+                <img src="@item.ImagePath" class="card-img-top mb-2"
+                     style="height:150px; object-fit:cover;" />
+            }
+            <h4>@item.Title</h4>
+            <p>@item.Description</p>
+        </div>
+    </div>
+}

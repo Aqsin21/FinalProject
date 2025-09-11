@@ -1,0 +1,47 @@
+﻿@using Hospital.DAL.DataContext.Entities
+@model Hospital.DAL.DataContext.Entities.AdminUser
+
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4">Create New Admin</h4>
+
+        <div class="card">
+            <div class="card-body">
+                <form asp-action="Create" method="post">
+                    <!-- 🔹 Hata mesajları -->
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <!-- Username -->
+                    <div class="mb-3">
+                        <label asp-for="UserName" class="form-label">Username</label>
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="mb-3">
+                        <label asp-for="Role" class="form-label">Role</label>
+                        <select asp-for="Role" class="form-select" asp-items="ViewBag.Roles">
+                            <option value="">-- Select Role --</option>
+                        </select>
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create</button>
+                    <a asp-area="Admin" asp-controller="AdminManagement" asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

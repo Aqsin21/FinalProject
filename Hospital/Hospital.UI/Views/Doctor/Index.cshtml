@@ -1,0 +1,110 @@
+﻿@model DoctorListViewModel
+
+<div class="doctores_section margim_90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="doctores_taital">Our Doctors</h1>
+            </div>
+        </div>
+
+        <!-- Search -->
+        <div class="row mb-4">
+            <div class="col-md-12 d-flex align-items-center">
+                <input type="text" id="doctorSearch" class="form-control me-2"
+                       placeholder="Enter the name of the doctor you are looking for "
+                       style="max-width: 250px; height:40px" />
+                <button type="button" class="btn btn-primary h-100" id="searchButton">Search</button>
+            </div>
+        </div>
+
+        <!-- Doctor List -->
+        <div class="row" id="doctorContainer">
+            @Html.Partial("_DoctorListPartial", Model)
+        </div>
+
+        <!-- Load More Button -->
+        <div class="row">
+            <div class="col-md-12 text-center mt-3">
+                <button id="loadMoreBtn" class="btn btn-primary">Load More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let skip = @Model.Doctors.Count;
+    const take = 4;
+    const doctorContainer = document.getElementById('doctorContainer');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+    // Favorite butonlarını baştan tanımla
+    function initFavoriteButtons(container) {
+        container.querySelectorAll('.favorite-btn').forEach(btn => {
+            if (!btn.dataset.listener) {
+                btn.dataset.listener = true;
+                btn.addEventListener('click', async function (e) {
+                    e.preventDefault();
+                    const doctorId = this.dataset.doctorid;
+                    const icon = this.querySelector('i');
+                    const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+
+                    const response = await fetch('@Url.Action("ToggleFavorite", "Doctor")', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'RequestVerificationToken': token
+                        },
+                        body: new URLSearchParams({ doctorId })
+                    });
+
+                    if (response.ok) {
+                        icon.classList.toggle('fa-heart');
+                        icon.classList.toggle('fa-heart-o');
+                        icon.classList.toggle('text-danger');
+                    }
+                });
+            }
+        });
+    }
+
+    // Başlangıçta sayfadaki doktorlar için
+    initFavoriteButtons(doctorContainer);
+
+    // Load More butonu
+    loadMoreBtn.addEventListener('click', async () => {
+        try {
+            const response = await fetch(`@Url.Action("LoadMore", "Doctor")?skip=${skip}&take=${take}`);
+            if (response.ok) {
+                const html = await response.text();
+                if(html.trim() === ''){
+                    loadMoreBtn.style.display = 'none';
+                    return;
+                }
+                doctorContainer.insertAdjacentHTML('beforeend', html);
+                skip += take;
+
+                // Yeni eklenen doktorlar için favorite listener
+                initFavoriteButtons(doctorContainer);
+            }
+        } catch(err){
+            console.error(err);
+        }
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('doctorSearch');
+    const searchButton = document.getElementById('searchButton');
+
+    function filterDoctors() {
+        const filter = searchInput.value.toLowerCase().trim();
+        doctorContainer.querySelectorAll('.doctores_box').forEach(box => {
+            const name = box.querySelector('h4')?.innerText.toLowerCase() || '';
+            const department = box.querySelector('p')?.innerText.toLowerCase() || '';
+            box.parentElement.style.display = (name.includes(filter) || department.includes(filter)) ? '' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterDoctors);
+    searchButton.addEventListener('click', filterDoctors);
+</script>

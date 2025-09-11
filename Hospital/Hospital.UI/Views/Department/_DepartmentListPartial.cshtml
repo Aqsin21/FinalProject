@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Hospital.DAL.DataContext.Entities.Department>
+
+@{
+    // Önceki departman sayısını skip üzerinden alıyoruz
+    int deptCount = ViewBag.Skip != null ? (int)ViewBag.Skip + 1 : 1;
+}
+
+@foreach (var dept in Model)
+{
+    <div class="col-lg-6 col-sm-12">
+        <div class="department_main_box">
+            <div class="department_header" onclick="toggleDoctors(@deptCount)">
+                <div class="department_title_section">
+                    <div class="number_text">@deptCount.ToString("00")</div>
+                    <div class="department_info">
+                        <h3 class="care_text">@dept.Name</h3>
+                        <p class="department_description">
+                            @(dept.Description ?? "Comprehensive medical care and treatment services.")
+                        </p>
+                    </div>
+                </div>
+                <div class="dropdown_arrow" id="arrow_@deptCount">
+                    <i class="fa fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div class="doctors_dropdown" id="doctors_@deptCount" style="display: none;">
+                @if (dept.Doctors != null && dept.Doctors.Any())
+                {
+                    <div class="doctors_list">
+                        <h4 class="doctors_title">Our Doctors</h4>
+                        @foreach (var doctor in dept.Doctors)
+                        {
+                            <div class="doctor_item">
+                                <div class="doctor_image_container">
+                                    <img src="@(string.IsNullOrEmpty(doctor.ImagePath)
+                                                                                 ? Url.Content("~/images/default-doctor.jpg")
+                                                                                 : Url.Content(doctor.ImagePath))"
+                             alt="@doctor.FullName" class="doctor_image" />
+                    </div>
+                    <div class="doctor_details">
+                        <h5 class="doctor_name">Dr. @doctor.FullName</h5>
+                        <p class="doctor_description">@doctor.Description</p>
+                    </div>
+                </div>
+                                }
+                    </div>
+                }
+                else
+                {
+                    <div class="no_doctors">
+                        <p class="treatment_text">No doctors currently available in this department.</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    deptCount++;
+}
