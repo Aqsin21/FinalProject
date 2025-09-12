@@ -22,6 +22,12 @@
     transition: ease all 0.5s;
 }
 
+        .doctores_box .image_1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* resmi k?rparak alan? doldurur */
+        }
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -741,120 +747,51 @@ p.doctorname_text {
 
 /* doctores section start */
 
-.doctores_section {
-    width: 100%;
-    float: left;
-    background-color: #1a3237;
-    height: auto;
-    background-size: 100%;
-    border-radius: 160px;
-    padding: 60px 0px 90px;
-}
-
-.doctores_taital {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    color: #ffffff;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.doctores_section_2 {
-    width: 100%;
-    float: left;
-    padding-top: 60px;
-}
-
 .doctores_box {
     width: 100%;
     float: left;
     background-color: #ffffff;
-    height: auto;
-    padding: 0px 10px 20px 10px;
-    border-radius: 5px;
+    height: 420px; /* sabit yükseklik */
+    padding: 10px;
+    border-radius: 10px;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .image_1 {
     width: 100%;
-    float: left;
-    top: -30px;
+    height: 220px; /* sabit resim alan? */
     position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
+
+    .image_1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* resmi k?rparak alan? doldurur */
+        display: block;
+    }
 
 .humour_text {
-    width: 100%;
-    font-size: 26px;
-    color: #0cb7d6;
-    text-align: center;
-    font-weight: bold;
-    padding: 0px;
-    line-height: 30px;
-}
-
-.mbbs_text {
-    font-size: 18px;
-}
-
-.social_icon {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.social_icon ul {
-    margin: 0px;
-    padding: 0px;
-    display: inline-block;
-}
-
-.social_icon li {
-    float: left;
-}
-
-.social_icon li a {
-    float: left;
-    padding: 0px 10px;
-    color: #000;
     font-size: 22px;
-    width: auto;
-}
-
-.social_icon li a:hover {
     color: #0cb7d6;
-}
-
-#my_slider a.carousel-control-prev {
-    left: -90px;
-    top: 170px;
-}
-
-#my_slider a.carousel-control-next {
-    right: -90px;
-    top: 170px;
-}
-
-#my_slider .carousel-control-next,
-#my_slider .carousel-control-prev {
-    width: 55px;
-    height: 55px;
-    opacity: 1;
-    font-size: 30px;
-    color: #0cb7d6;
-    background-color: #ffffff;
+    text-align: center;
     font-weight: bold;
+    margin: 10px 0 5px;
+    line-height: 26px;
 }
 
-#my_slider .carousel-control-next:focus,
-#my_slider .carousel-control-next:hover,
-#my_slider .carousel-control-prev:focus,
-#my_slider .carousel-control-prev:hover {
-    color: #ffffff;
-    background-color: #0cb7d6;
+.mbbs_text,
+.doctores_box p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
 }
-
 
 /* doctores section end */
 

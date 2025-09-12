@@ -19,7 +19,7 @@ namespace Hospital.UI.Controllers
             _userManager = userManager;
         }
 
-        // Başlangıçta sadece ilk 6 doktoru getir
+        
         public async Task<IActionResult> Index()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -27,7 +27,7 @@ namespace Hospital.UI.Controllers
             var doctors = await _dbContext.Doctors
                 .Include(d => d.Department)
                 .OrderBy(d => d.Id)
-                .Take(6)
+                .Take(3) // ilk sayfada 3 doktor
                 .ToListAsync();
 
             var userFavoriteIds = new List<int>();
@@ -45,8 +45,41 @@ namespace Hospital.UI.Controllers
                 UserFavoriteDoctorIds = userFavoriteIds
             };
 
-            ViewBag.Skip = doctors.Count;
+            ViewBag.Skip = doctors.Count; // 3
             return View(vm);
+        }
+
+        public async Task<IActionResult> LoadMore(int skip = 0, int take = 3)
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            var doctors = await _dbContext.Doctors
+                .Include(d => d.Department)
+                .OrderBy(d => d.Id)
+                .Skip(skip)
+                .Take(take)
+                .ToListAsync();
+
+            var userFavoriteIds = new List<int>();
+            if (user != null)
+            {
+                userFavoriteIds = await _dbContext.Favorites
+                    .Where(f => f.UserId == user.Id)
+                    .Select(f => f.DoctorId)
+                    .ToListAsync();
+            }
+
+            if (!doctors.Any())
+                return Content(""); // Daha fazla doktor yok
+
+            var vm = new DoctorListViewModel
+            {
+                Doctors = doctors,
+                UserFavoriteDoctorIds = userFavoriteIds
+            };
+
+            ViewBag.Skip = skip + doctors.Count;
+            return PartialView("_DoctorListPartial", vm);
         }
 
         [Authorize]
@@ -79,39 +112,6 @@ namespace Hospital.UI.Controllers
         }
 
         // Load More için
-        public async Task<IActionResult> LoadMore(int skip = 0, int take = 3)
-        {
-            var user = await _userManager.GetUserAsync(User);
-
-            var doctors = await _dbContext.Doctors
-                .Include(d => d.Department)
-                .OrderBy(d => d.Id)
-                .Skip(skip)
-                .Take(take)
-                .ToListAsync();
-
-            var userFavoriteIds = new List<int>();
-            if (user != null)
-            {
-                userFavoriteIds = await _dbContext.Favorites
-                    .Where(f => f.UserId == user.Id)
-                    .Select(f => f.DoctorId)
-                    .ToListAsync();
-            }
-
-            if (!doctors.Any())
-            {
-                return Content(""); // Daha fazla doktor yok
-            }
-
-            var vm = new DoctorListViewModel
-            {
-                Doctors = doctors,
-                UserFavoriteDoctorIds = userFavoriteIds
-            };
-
-            ViewBag.Skip = skip + doctors.Count;
-            return PartialView("_DoctorListPartial", vm);
-        }
+      
     }
 }

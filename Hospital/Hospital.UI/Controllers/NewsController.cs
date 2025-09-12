@@ -16,7 +16,7 @@ namespace Hospital.UI.Controllers
         {
             var news = _context.Newss
                 .OrderByDescending(n => n.Id)
-                .Take(4)
+                .Take(3)
                 .ToList();
 
             return View(news);
